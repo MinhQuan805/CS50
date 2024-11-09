@@ -1,0 +1,83 @@
+.white-background {
+    background-color: white;
+  }
+.search {
+    padding: 0;
+    margin: 0;
+    height: 6vh;
+    width: auto;
+  }
+.search-form {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 1s;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 3px solid white;
+    padding: 5px;
+  }
+  .search:focus-within {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
+    border-color: #66B2FF;
+  }
+  .search-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;;
+    height: 42.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    border: 2px solid #66b2ff;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+  }
+  .fa-solid.fa-magnifying-glass{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: #66b2ff;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+  }
+  .search-form:hover{
+    width: 300px;
+    cursor: pointer;
+  }
+
+  .search-form:hover input{
+    display: block;
+  }
+
+  .search-form:hover .fa-solid.fa-magnifying-glass{
+    background: #66b2ff;
+    color: white;
+  }
+  .navbar-dark .nav-item .nav-link {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .navbar-dark .nav-item .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    border-radius: 0.25rem;
+    color: #fff;
+  }
+
+
+

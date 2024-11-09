@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', () => {
+                const answer = document.getElementById("answer");
+                let stop = false;
+                document.querySelectorAll('.Wrong').forEach(button => {
+                button.addEventListener('click', function() {
+                    if(!stop) {
+                    this.style.backgroundColor = 'red';
+                    answer.innerHTML = "Incorrect";}
+                });
+            });
+                document.querySelectorAll('.Right').forEach(button => {
+                button.addEventListener('click', function() {
+                    this.style.backgroundColor = 'green';
+                    answer.innerHTML = "Correct!";
+                    stop = true;
+                });
+            });
+            document.querySelector("#check").addEventListener("click", function() {
+                let input = document.querySelector('input');
+                if (input.value === 'Switzerland') {
+                    input.style.backgroundColor = 'green';
+                    document.getElementById('next').innerHTML = "Correct!";
+                }
+                else {
+                    input.style.backgroundColor = 'red';
+                    document.getElementById('next').innerHTML = "Incorrect";
+                }
+            })
+        });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>
+                    Cái gì luôn đến, nhưng không bao giờ đến lần thứ hai?
+                </h3>
+                <button class="Wrong">Ngày hôm qua</button>
+                <button class="Wrong">Ngày hôm nay</button>
+                <button class="Right">Ngày mai</button>
+                <button class="Wrong">Ngày sinh nhật</button>
+                <button class="Wrong">Đêm</button>
+                <h4 id="answer"></h4>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>In which country is it illegal to own only one guinea pig, as a lone guinea pig might get lonely?</h3>
+                <input type = "text"></input>
+                <button id="check">Check Answer</button>
+                 <h4 id="next"></h4>
+            </div>
+        </div>
+    </body>
+</html>

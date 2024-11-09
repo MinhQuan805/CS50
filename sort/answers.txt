@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: Sort1 take more time in reversed50000.txt (upperbound) than sorted50000.txt (lowerbound)
+
+sort2 uses: merge sort
+
+How do you know?: In random, sort2 is the fastest in 3 sort
+
+sort3 uses: selection sort
+
+How do you know?: Sort3 take same time in the reversed.txt and sorted.txt
